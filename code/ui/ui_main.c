@@ -44,11 +44,11 @@ static const char *MonthAbbrev[] = {
 
 
 static const char *skillLevels[] = {
-  "I Can Win",
-  "Bring It On",
-  "Hurt Me Plenty",
-  "Hardcore",
-  "Nightmare"
+  "ez game",
+  "owie",
+  "mmmgh~",
+  "Hardcore porno",
+  "fuck you"
 };
 
 static const int numSkillLevels = ARRAY_LEN( skillLevels );
@@ -64,25 +64,12 @@ static const int numSkillLevels = ARRAY_LEN( skillLevels );
 #define UIAS_FAVORITES			7
 
 static const char *netSources[] = {
-	"Local",
-	"Internet",
-	"Master1",
-	"Master2",
-	"Master3",
-	"Master4",
-	"Master5",
-	"Favorites"
+	"Local"
 };
 static const int numNetSources = ARRAY_LEN( netSources );
 
 static const serverFilter_t serverFilters[] = {
-	{"All", "" },
-	{"Quake 3 Arena", "" },
-	{"Team Arena", BASETA },
-	{"Rocket Arena", "arena" },
-	{"Alliance", "alliance20" },
-	{"Weapons Factory Arena", "wfa" },
-	{"OSP", "osp" },
+	{"no", "" }
 };
 
 static const int numServerFilters = ARRAY_LEN( serverFilters );
@@ -109,7 +96,7 @@ static char* netnames[] = {
 };
 
 #ifndef MISSIONPACK
-static char quake3worldMessage[] = "Visit www.quake3world.com - News, Community, Events, Files";
+static char quake3worldMessage[] = "fuck you";
 #endif
 
 static int gamecodetoui[] = {4,2,3,0,5,1,6};
@@ -193,7 +180,7 @@ Q_EXPORT intptr_t vmMain( int command, int arg0, int arg1, int arg2, int arg3, i
 		  UI_DrawConnectScreen( arg0 );
 		  return 0;
 	  case UI_HASUNIQUECDKEY: // mod authors need to observe this
-	    return qtrue; // change this to qfalse for mods!
+	    return qfalse; // change this to qfalse for mods!
 
 	}
 
@@ -934,7 +921,7 @@ void UI_LoadMenus(const char *menuFile, qboolean reset) {
 		Com_Printf( S_COLOR_YELLOW "menu file not found: %s, using default\n", menuFile );
 		handle = trap_PC_LoadSource( "ui/menus.txt" );
 		if (!handle) {
-			trap_Error( S_COLOR_RED "default menu file not found: ui/menus.txt, unable to continue!" );
+			trap_Error( S_COLOR_RED "default menu file not found: ui/menus.txt, you fucked up" );
 		}
 	}
 

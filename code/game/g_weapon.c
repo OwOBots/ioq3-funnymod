@@ -115,7 +115,7 @@ qboolean CheckGauntletAttack( gentity_t *ent ) {
 	}
 #endif
 
-	damage = 50 * s_quadFactor;
+	damage = 2 * s_quadFactor;
 	G_Damage( traceEnt, ent, ent, forward, tr.endpos,
 		damage, 0, MOD_GAUNTLET );
 
@@ -158,7 +158,7 @@ void SnapVectorTowards( vec3_t v, vec3_t to ) {
 #define CHAINGUN_DAMAGE		7
 #endif
 #define MACHINEGUN_SPREAD	200
-#define	MACHINEGUN_DAMAGE	7
+#define	MACHINEGUN_DAMAGE	1 // hoo hee haha
 #define	MACHINEGUN_TEAM_DAMAGE	5		// wimpier MG in teamplay
 
 void Bullet_Fire (gentity_t *ent, float spread, int damage, int mod ) {
@@ -265,7 +265,7 @@ SHOTGUN
 
 // DEFAULT_SHOTGUN_SPREAD and DEFAULT_SHOTGUN_COUNT	are in bg_public.h, because
 // client predicts same spreads
-#define	DEFAULT_SHOTGUN_DAMAGE	10
+#define	DEFAULT_SHOTGUN_DAMAGE	10 * 1000
 
 qboolean ShotgunPellet( vec3_t start, vec3_t end, gentity_t *ent ) {
 	trace_t		tr;
@@ -449,7 +449,7 @@ void weapon_railgun_fire (gentity_t *ent) {
 	int			passent;
 	gentity_t	*unlinkedEntities[MAX_RAIL_HITS];
 
-	damage = 100 * s_quadFactor;
+	damage = 1 * s_quadFactor;
 
 	VectorMA (muzzle, 8192, forward, end);
 
@@ -614,7 +614,7 @@ void Weapon_LightningFire( gentity_t *ent ) {
 	gentity_t	*traceEnt, *tent;
 	int			damage, i, passent;
 
-	damage = 8 * s_quadFactor;
+	damage = 20 * s_quadFactor;
 
 	passent = ent->s.number;
 	for (i = 0; i < 10; i++) {

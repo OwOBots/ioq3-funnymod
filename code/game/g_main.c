@@ -408,7 +408,7 @@ G_InitGame
 void G_InitGame( int levelTime, int randomSeed, int restart ) {
 	int					i;
 
-	G_Printf ("------- Game Initialization -------\n");
+	G_Printf ("------- funnymod -------\n");
 	G_Printf ("gamename: %s\n", GAMEVERSION);
 	G_Printf ("gamedate: %s\n", PRODUCT_DATE);
 
@@ -519,7 +519,7 @@ G_ShutdownGame
 =================
 */
 void G_ShutdownGame( int restart ) {
-	G_Printf ("==== ShutdownGame ====\n");
+	G_Printf ("==== bye ====\n");
 
 	if ( level.logFile ) {
 		G_LogPrintf("ShutdownGame:\n" );
@@ -1631,11 +1631,11 @@ void SetLeader(int team, int client) {
 	int i;
 
 	if ( level.clients[client].pers.connected == CON_DISCONNECTED ) {
-		PrintTeam(team, va("print \"%s is not connected\n\"", level.clients[client].pers.netname) );
+		PrintTeam(team, va("print \"%s is not here\n\"", level.clients[client].pers.netname) );
 		return;
 	}
 	if (level.clients[client].sess.sessionTeam != team) {
-		PrintTeam(team, va("print \"%s is not on the team anymore\n\"", level.clients[client].pers.netname) );
+		PrintTeam(team, va("print \"%s is a traitor and can't be team leader\n\"", level.clients[client].pers.netname) );
 		return;
 	}
 	for ( i = 0 ; i < level.maxclients ; i++ ) {
@@ -1648,7 +1648,7 @@ void SetLeader(int team, int client) {
 	}
 	level.clients[client].sess.teamLeader = qtrue;
 	ClientUserinfoChanged( client );
-	PrintTeam(team, va("print \"%s is the new team leader\n\"", level.clients[client].pers.netname) );
+	PrintTeam(team, va("print \"%s is the new team leader may god help you\n\"", level.clients[client].pers.netname) );
 }
 
 /*

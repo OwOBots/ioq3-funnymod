@@ -45,11 +45,6 @@ NETWORK OPTIONS MENU
 
 
 static const char *rate_items[] = {
-	"<= 28.8K",
-	"33.6K",
-	"56K",
-	"ISDN",
-	"LAN/Cable/xDSL",
 	NULL
 };
 

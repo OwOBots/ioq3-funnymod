@@ -120,16 +120,16 @@ static void CG_Obituary( entityState_t *ent ) {
 
 	switch( mod ) {
 	case MOD_SUICIDE:
-		message = "suicides";
+		message = "unalived themselves"; // i hate tiktok
 		break;
 	case MOD_FALLING:
-		message = "cratered";
+		message = "did a sick flip and fucking died";
 		break;
 	case MOD_CRUSH:
-		message = "was squished";
+		message = "Had a Giantess fetish";
 		break;
 	case MOD_WATER:
-		message = "sank like a rock";
+		message = "thought they was a fish";
 		break;
 	case MOD_SLIME:
 		message = "melted";
@@ -141,7 +141,7 @@ static void CG_Obituary( entityState_t *ent ) {
 		message = "saw the light";
 		break;
 	case MOD_TRIGGER_HURT:
-		message = "was in the wrong place";
+		message = "was oob";
 		break;
 	default:
 		message = NULL;
@@ -158,11 +158,11 @@ static void CG_Obituary( entityState_t *ent ) {
 #endif
 		case MOD_GRENADE_SPLASH:
 			if ( gender == GENDER_FEMALE )
-				message = "tripped on her own grenade";
+				message = "postal 2 ref";
 			else if ( gender == GENDER_NEUTER )
-				message = "tripped on its own grenade";
+				message = "postal 2 ref";
 			else
-				message = "tripped on his own grenade";
+				message = "postal 2 ref";
 			break;
 		case MOD_ROCKET_SPLASH:
 			if ( gender == GENDER_FEMALE )
@@ -181,7 +181,7 @@ static void CG_Obituary( entityState_t *ent ) {
 				message = "melted himself";
 			break;
 		case MOD_BFG_SPLASH:
-			message = "should have used a smaller gun";
+			message = "souped";
 			break;
 #ifdef MISSIONPACK
 		case MOD_PROXIMITY_MINE:
@@ -196,11 +196,11 @@ static void CG_Obituary( entityState_t *ent ) {
 #endif
 		default:
 			if ( gender == GENDER_FEMALE )
-				message = "killed herself";
+				message = "unalived herself";
 			else if ( gender == GENDER_NEUTER )
-				message = "killed itself";
+				message = "unalived itself";
 			else
-				message = "killed himself";
+				message = "unalived himself";
 			break;
 		}
 	}
@@ -215,11 +215,11 @@ static void CG_Obituary( entityState_t *ent ) {
 		char	*s;
 
 		if ( cgs.gametype < GT_TEAM ) {
-			s = va("You fragged %s\n%s place with %i", targetName, 
+			s = va("You fucked %s\n%s place with %i", targetName,
 				CG_PlaceString( cg.snap->ps.persistant[PERS_RANK] + 1 ),
 				cg.snap->ps.persistant[PERS_SCORE] );
 		} else {
-			s = va("You fragged %s", targetName );
+			s = va("You fucked this guy: %s", targetName );
 		}
 #ifdef MISSIONPACK
 		if (!(cg_singlePlayerActive.integer && cg_cameraOrbit.integer)) {
@@ -251,7 +251,7 @@ static void CG_Obituary( entityState_t *ent ) {
 			message = "was caught by";
 			break;
 		case MOD_GAUNTLET:
-			message = "was pummeled by";
+			message = "how did he die????:";
 			break;
 		case MOD_MACHINEGUN:
 			message = "was machinegunned by";
@@ -287,7 +287,7 @@ static void CG_Obituary( entityState_t *ent ) {
 			message = "was railed by";
 			break;
 		case MOD_LIGHTNING:
-			message = "was electrocuted by";
+			message = "1 dps lightning hit";
 			break;
 		case MOD_BFG:
 		case MOD_BFG_SPLASH:
@@ -319,7 +319,7 @@ static void CG_Obituary( entityState_t *ent ) {
 			message2 = "'s personal space";
 			break;
 		default:
-			message = "was killed by";
+			message = "was fucked by";
 			break;
 		}
 
