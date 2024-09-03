@@ -1788,7 +1788,7 @@ void CL_Connect_f( void ) {
  */
 static CL_no(char *args)
 		{
-	Com_printf("no fuck off")
+	Com_Printf("no fuck off");
 		}
 
 /*
@@ -3687,7 +3687,7 @@ void CL_Init( void ) {
 	Cmd_AddCommand ("cinematic", CL_PlayCinematic_f);
 	Cmd_AddCommand ("stoprecord", CL_StopRecord_f);
 	//Cmd_AddCommand ("connect", CL_Connect_f);
-	Cmd_AddCommand ("connect", CL_no)
+	Cmd_AddCommand ("connect", CL_no);
 	Cmd_AddCommand ("reconnect", CL_Reconnect_f);
 	//Cmd_AddCommand ("localservers", CL_LocalServers_f);
 	//Cmd_AddCommand ("globalservers", CL_GlobalServers_f);
