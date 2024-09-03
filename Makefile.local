@@ -1,0 +1,9 @@
+ifndef VERSION
+ 	VERSION=1.337
+endif
+ifndef CLIENTBIN
+	CLIENTBIN=funnyq3
+endif
+ifndef SERVERBIN
+	SERVERBIN=funnyq3srv
+endif
