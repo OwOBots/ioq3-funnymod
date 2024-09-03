@@ -1786,7 +1786,7 @@ void CL_Connect_f( void ) {
  CL_no
  =============
  */
-void CL_no(char *args)
+void CL_no(void)
 		{
 	Com_Printf("no fuck off");
 		}
